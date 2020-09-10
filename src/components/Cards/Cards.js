@@ -1,7 +1,17 @@
 import React from 'react';
 
-const Cards = () => {
-  return <h1>Cards</h1>;
+import styles from './Cards.module.css';
+import Card from '../Card/Card';
+
+const Cards = (props) => {
+  console.log(props.data);
+  return (
+    <div className={styles.container}>
+      <Card />
+      <Card />
+      <Card />
+    </div>
+  );
 };
 
 export default Cards;
