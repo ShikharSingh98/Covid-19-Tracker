@@ -12,6 +12,7 @@ class App extends React.Component {
     super();
     this.state = {
       globalData: [],
+      selectedCountry: '',
     };
   }
 

@@ -33,5 +33,18 @@ export const fetchGlobalData = async () => {
         lastUpdate: lastUpdate,
       },
     ];
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchAllCountriesData = async () => {
+  try {
+    const {
+      data: { countries },
+    } = await axios.get(`${url}/countries`);
+    return countries;
+  } catch (error) {
+    console.log(error);
+  }
 };
