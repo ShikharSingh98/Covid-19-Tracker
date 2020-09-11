@@ -4,15 +4,19 @@ import styles from './Card.module.css';
 
 import CountUp from 'react-countup';
 
-const Card = ({ count, lastUpdate }) => {
+const Card = ({ heading, total, color, lastUpdate, src }) => {
   return (
     <div className={styles.container}>
-      <span className={styles.heading}>Infected</span>
-      <span className={styles.count}>
-        <CountUp start={0} end={count} duration={2.5} separator="," />
+      <div className={styles.imgcontainer}>
+        <img className={styles.image} src={src} />
+      </div>
+      <span className={styles.count} style={{ color: color }}>
+        <CountUp start={0} end={total} duration={2.5} separator="," />
       </span>
       <div className={styles.content}>
-        <span className={styles.detail}>Number of active cases of covid</span>
+        <span className={styles.detail}>
+          Number of {heading.toLowerCase()} cases of covid-19
+        </span>
         <span className={styles.date}>
           {new Date(lastUpdate).toDateString()}
         </span>

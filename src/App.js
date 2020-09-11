@@ -3,31 +3,46 @@ import React from 'react';
 import styles from './App.module.css';
 
 import Cards from './components/Cards/Cards';
-import Chart from './components/Chart/Chart';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 
-import { fetchData } from './api/index';
+import { fetchGlobalData } from './api/index';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      data: {},
+      globalData: [],
     };
   }
 
   async componentDidMount() {
-    const fetchedData = await fetchData();
-    this.setState({ data: fetchedData });
+    const fetchedData = await fetchGlobalData();
+    this.setState({ globalData: fetchedData });
   }
   render() {
-    const { data } = this.state;
+    const { globalData } = this.state;
     return (
-      <div className={styles.container}>
-        <Cards data={data} />
-        <CountryPicker />
-        <Chart />
-      </div>
+      <>
+        <div className={styles.headingContainer}>
+          <h1 className={styles.heading}>COVID-19 TRACKER </h1>
+          <div>
+            <img
+              className={styles.image}
+              src="https://img.icons8.com/ultraviolet/40/000000/virus.png"
+            />
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.globalHeadingContainer}>
+            <h2 className={styles.globalheading}>Global Status</h2>
+            <div>
+              <img src="https://img.icons8.com/plasticine/50/000000/geography.png" />
+            </div>
+          </div>
+          <Cards data={globalData} />
+          <CountryPicker />
+        </div>
+      </>
     );
   }
 }
