@@ -3,13 +3,15 @@ import React from 'react';
 import styles from './Cards.module.css';
 import Card from '../Card/Card';
 
-const Cards = (props) => {
-  console.log(props.data);
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+  if (!confirmed) {
+    return 'Loading...';
+  }
   return (
     <div className={styles.container}>
-      <Card />
-      <Card />
-      <Card />
+      <Card count={confirmed.value} lastUpdate={lastUpdate} />
+      <Card count={recovered.value} lastUpdate={lastUpdate} />
+      <Card count={deaths.value} lastUpdate={lastUpdate} />
     </div>
   );
 };

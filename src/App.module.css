@@ -1,9 +1,10 @@
 body {
-  background-color: rgb(250, 250, 250);
+  background-color: #edf2fb;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

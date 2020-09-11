@@ -1,8 +1,41 @@
 .container {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1.5rem 1rem;
+  justify-content: space-between;
   font-family: 'Open Sans', sans-serif;
+  border: 1px solid rgba(223, 220, 220, 0.753);
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: #00b4d8;
+  color: white;
+  text-align: center;
+}
+
+.count {
+  font-size: 2rem;
+  color: #00b4d8;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.date {
+  color: grey;
+  text-align: right;
+  margin: 1rem 0;
+}
+
+.detail {
+  text-align: center;
+  padding: 0 2rem;
+  margin-top: 1rem;
 }
