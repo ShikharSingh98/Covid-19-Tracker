@@ -4,6 +4,7 @@ import styles from './App.module.css';
 
 import Cards from './components/Cards/Cards';
 import CountryPicker from './components/CountryPicker/CountryPicker';
+import Chart from './components/Chart/Chart';
 
 import { fetchGlobalData } from './api/index';
 
@@ -41,7 +42,19 @@ class App extends React.Component {
             </div>
           </div>
           <Cards data={globalData} />
-          <CountryPicker />
+          <Chart />
+          <div className={styles.lastUpdate}>
+            {globalData.length !== 0 ? (
+              <span>
+                Last updated :
+                {` ${new Date(
+                  globalData[0].lastUpdate
+                ).toDateString()}, ${new Date(
+                  globalData[0].lastUpdate
+                ).toLocaleTimeString()}`}
+              </span>
+            ) : null}
+          </div>
         </div>
       </>
     );

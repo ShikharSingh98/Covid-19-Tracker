@@ -1,5 +1,5 @@
 body {
-  background-color: #531a9f;
+  background-color: #457b9d;
 }
 
 .headingContainer {
@@ -13,7 +13,7 @@ body {
   margin: 2rem 0;
   font-family: 'Bebas Neue', cursive;
   font-size: 5rem;
-  color: #22aaff;
+  color: #a8dadc;
 }
 
 .container {
@@ -31,11 +31,17 @@ body {
   font-size: 2rem;
   color: #fffbfe;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .globalHeadingContainer {
   display: flex;
   justify-content: center;
   align-items: baseline;
+}
+
+.lastUpdate {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  margin-top: 1rem;
 }

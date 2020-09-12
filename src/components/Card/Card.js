@@ -17,9 +17,6 @@ const Card = ({ heading, total, color, lastUpdate, src }) => {
         <span className={styles.detail}>
           Number of {heading.toLowerCase()} cases of covid-19
         </span>
-        <span className={styles.date}>
-          {new Date(lastUpdate).toDateString()}
-        </span>
       </div>
     </div>
   );

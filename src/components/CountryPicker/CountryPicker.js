@@ -21,9 +21,9 @@ class CountryPicker extends React.Component {
     const { countries } = this.state;
     return (
       <div className={styles.container}>
-        <span>Country Status</span>
+        <span className={styles.heading}>Select Country</span>
         {countries.length !== 0 ? (
-          <select>
+          <select className={styles.selectCountry}>
             {countries.map(({ name }) => {
               return (
                 <option key={name} value={name}>

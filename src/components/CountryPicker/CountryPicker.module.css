@@ -1,5 +1,23 @@
 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 3rem;
+  border: 1px solid white;
+}
+
+.heading {
+  font-size: 1.5rem;
+  color: #fffbfe;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.selectCountry {
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem 0.6rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
