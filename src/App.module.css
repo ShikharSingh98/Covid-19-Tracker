@@ -1,5 +1,7 @@
 body {
-  background-color: #1a535c;
+  /* background-color: #1a535c;
+  background-color: #feb612; */
+  background-color: #fdfeff;
 }
 
 .headingContainer {
@@ -13,7 +15,8 @@ body {
   margin: 2rem 0;
   font-family: 'Bebas Neue', cursive;
   font-size: 5rem;
-  color: #ff6b6b;
+  /* color: #ff6b6b; */
+  color: #00a6a6;
 }
 
 .container {
@@ -30,8 +33,10 @@ body {
 .globalheading {
   font-size: 2rem;
   color: #ffe66d;
+  color: #ff8800;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .globalHeadingContainer {

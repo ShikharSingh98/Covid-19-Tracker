@@ -7,7 +7,7 @@ import CountryPicker from './components/CountryPicker/CountryPicker';
 import Chart from './components/Chart/Chart';
 import LastUpdate from './components/LastUpdate/LastUpdate';
 
-import { fetchGlobalData } from './api/index';
+import { fetchData } from './api/index';
 
 class App extends React.Component {
   constructor() {
@@ -15,15 +15,26 @@ class App extends React.Component {
     this.state = {
       globalData: [],
       selectedCountry: '',
+      selectedCountryData: [],
     };
   }
 
+  fetchCountryData = async (country) => {
+    const fetchedData = await fetchData(country);
+    this.setState({
+      selectedCountry: country,
+      selectedCountryData: fetchedData,
+    });
+  };
+
   async componentDidMount() {
-    const fetchedData = await fetchGlobalData();
+    const fetchedData = await fetchData();
     this.setState({ globalData: fetchedData });
+    this.fetchCountryData('India');
   }
+
   render() {
-    const { globalData } = this.state;
+    const { globalData, selectedCountryData } = this.state;
     return (
       <>
         <div className={styles.headingContainer}>
@@ -42,7 +53,12 @@ class App extends React.Component {
           <Cards data={globalData} />
           <Chart />
           <LastUpdate data={globalData} />
-          <CountryPicker />
+
+          <CountryPicker
+            fetchCountryData={this.fetchCountryData}
+            selectedCountry={this.state.selectedCountry}
+          />
+          <Cards data={selectedCountryData} />
         </div>
       </>
     );

@@ -4,7 +4,7 @@ import styles from './Card.module.css';
 
 import CountUp from 'react-countup';
 
-const Card = ({ heading, total, color, lastUpdate, src }) => {
+const Card = ({ heading, total, color, src }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgcontainer}>

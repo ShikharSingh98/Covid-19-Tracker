@@ -1,18 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
   width: 73%;
-}
-
-.heading {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  color: #ffe66d;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .selectCountry {
@@ -24,4 +13,17 @@
   padding: 0.3rem 0.2rem;
   border-radius: 5px;
   margin-top: 2rem;
+}
+
+.countryHeading {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  /* color: #ffe66d; */
+  color: #ff8800;
+  width: 73%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 3rem;
 }
