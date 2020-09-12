@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 import { fetchDailyData } from '../../api';
 
@@ -40,21 +32,48 @@ class Chart extends React.Component {
             bottom: 5,
           }}
         >
-          <XAxis dataKey="Date" tickLine={false} />
-          <YAxis tickLine={false} tick={{ stroke: '' }} />
-          <Tooltip />
+          <XAxis
+            dataKey="Date"
+            tickLine={false}
+            padding={{ right: 20 }}
+            tick={{
+              fill: 'white',
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 'bold',
+            }}
+            minTickGap={10}
+          />
+          <YAxis
+            tickLine={false}
+            padding={{ top: 20 }}
+            tick={{
+              fill: 'white',
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 'bold',
+            }}
+          />
+          <Tooltip
+            labelStyle={{
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 'bold',
+            }}
+            itemStyle={{
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: 'bold',
+            }}
+          />
           <Legend />
           <Line
             type="monotone"
             dataKey="Infected"
-            stroke="#4361ee"
+            stroke="#4ecdc4"
             dot={false}
             strokeWidth="0.2rem"
           />
           <Line
             type="monotone"
             dataKey="Deaths"
-            stroke="#ef233c"
+            stroke="#ff6b6b"
             dot={false}
             strokeWidth="0.2rem"
           />

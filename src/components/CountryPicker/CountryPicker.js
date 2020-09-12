@@ -21,7 +21,10 @@ class CountryPicker extends React.Component {
     const { countries } = this.state;
     return (
       <div className={styles.container}>
-        <span className={styles.heading}>Select Country</span>
+        <div className={styles.heading}>
+          <span>Select Country </span>
+          <img src="https://www.countryflags.io/be/flat/64.png"></img>
+        </div>
         {countries.length !== 0 ? (
           <select className={styles.selectCountry}>
             {countries.map(({ name }) => {

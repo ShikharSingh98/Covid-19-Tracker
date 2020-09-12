@@ -1,4 +1,5 @@
 import axios from 'axios';
+import moment from 'moment';
 
 const url = 'https://covid19.mathdro.id/api';
 
@@ -56,7 +57,7 @@ export const fetchDailyData = async () => {
       return {
         Infected: d.confirmed.total,
         Deaths: d.deaths.total,
-        Date: d.reportDate,
+        Date: moment(d.reportDate).format('MMM D'),
       };
     });
     return modifiedData;

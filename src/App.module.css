@@ -1,5 +1,5 @@
 body {
-  background-color: #457b9d;
+  background-color: #1a535c;
 }
 
 .headingContainer {
@@ -13,7 +13,7 @@ body {
   margin: 2rem 0;
   font-family: 'Bebas Neue', cursive;
   font-size: 5rem;
-  color: #a8dadc;
+  color: #ff6b6b;
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
 
 .globalheading {
   font-size: 2rem;
-  color: #fffbfe;
+  color: #ffe66d;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 2rem;
 }
@@ -38,10 +38,4 @@ body {
   display: flex;
   justify-content: center;
   align-items: baseline;
-}
-
-.lastUpdate {
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  margin-top: 1rem;
 }

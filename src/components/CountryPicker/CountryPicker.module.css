@@ -1,23 +1,27 @@
 .container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
   margin-top: 3rem;
-  border: 1px solid white;
+  width: 73%;
 }
 
 .heading {
-  font-size: 1.5rem;
-  color: #fffbfe;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #ffe66d;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .selectCountry {
   font-size: 1rem;
   outline: none;
-  padding: 0.5rem 0.6rem;
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
   text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.3rem 0.2rem;
+  border-radius: 5px;
+  margin-top: 2rem;
 }
