@@ -43,6 +43,7 @@ class App extends React.Component {
             <img
               className={styles.image}
               src="https://img.icons8.com/ultraviolet/40/000000/virus.png"
+              alt="virus"
             />
           </div>
         </div>
@@ -59,6 +60,7 @@ class App extends React.Component {
             selectedCountry={this.state.selectedCountry}
           />
           <Cards data={selectedCountryData} />
+          <LastUpdate data={globalData} />
         </div>
       </>
     );

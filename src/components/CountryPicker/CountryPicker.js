@@ -41,7 +41,6 @@ class CountryPicker extends React.Component {
   };
 
   renderFlag = (country) => {
-    console.log(country);
     if (country) {
       const selectedCountryData = this.state.countries.filter(
         ({ name }) => name === country
@@ -49,6 +48,7 @@ class CountryPicker extends React.Component {
       if (selectedCountryData[0].iso2) {
         return (
           <img
+            className={styles.image}
             src={`https://www.countryflags.io/${selectedCountryData[0].iso2}/flat/64.png`}
             alt="flag"
           ></img>
