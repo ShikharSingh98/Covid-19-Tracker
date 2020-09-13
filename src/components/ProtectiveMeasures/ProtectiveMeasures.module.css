@@ -1,0 +1,19 @@
+.measures {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.measures img {
+  width: 80px;
+}
+
+.measures span {
+  width: 500px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

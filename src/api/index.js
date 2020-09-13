@@ -15,7 +15,7 @@ export const fetchData = async (country) => {
     return [
       {
         id: 1,
-        heading: 'Infected',
+        heading: 'infected',
         src: 'https://img.icons8.com/plasticine/100/000000/being-sick.png',
         total: confirmed.value,
         color: '#4361ee',
@@ -23,7 +23,7 @@ export const fetchData = async (country) => {
       },
       {
         id: 2,
-        heading: 'Recovered',
+        heading: 'recovered',
         src: 'https://img.icons8.com/color/100/000000/recovery.png',
         total: recovered.value,
         color: '#188c31',
@@ -31,7 +31,7 @@ export const fetchData = async (country) => {
       },
       {
         id: 3,
-        heading: 'Death',
+        heading: 'death',
         src: 'https://img.icons8.com/color/100/000000/headstone.png',
         total: deaths.value,
         color: '#ef233c',
@@ -59,9 +59,9 @@ export const fetchDailyData = async () => {
     const { data } = await axios.get(`${url}/daily`);
     const modifiedData = data.map((d) => {
       return {
-        Infected: d.confirmed.total,
-        Deaths: d.deaths.total,
-        Date: moment(d.reportDate).format('MMM D'),
+        infected: d.confirmed.total,
+        deaths: d.deaths.total,
+        date: moment(d.reportDate).format('MMM D'),
       };
     });
     return modifiedData;

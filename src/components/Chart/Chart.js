@@ -1,9 +1,15 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
 import { fetchDailyData } from '../../api';
-
-import styles from './Chart.module.css';
 
 class Chart extends React.Component {
   constructor() {
@@ -20,10 +26,8 @@ class Chart extends React.Component {
 
   render() {
     return (
-      <div className={styles.container}>
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
-          width={500}
-          height={300}
           data={this.state.data}
           margin={{
             top: 5,
@@ -33,24 +37,27 @@ class Chart extends React.Component {
           }}
         >
           <XAxis
-            dataKey="Date"
-            tickLine={false}
+            dataKey="date"
+            // tickLine={false}
             padding={{ right: 20 }}
             tick={{
               fill: 'white',
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: 'bold',
+              transform: 'translate(0, 5)',
             }}
             minTickGap={10}
+            stroke="white"
           />
           <YAxis
-            tickLine={false}
+            // tickLine={false}
             padding={{ top: 20 }}
             tick={{
               fill: 'white',
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: 'bold',
             }}
+            stroke="white"
           />
           <Tooltip
             labelStyle={{
@@ -65,20 +72,20 @@ class Chart extends React.Component {
           <Legend />
           <Line
             type="monotone"
-            dataKey="Infected"
+            dataKey="infected"
             stroke="#4ecdc4"
             dot={false}
             strokeWidth="0.2rem"
           />
           <Line
             type="monotone"
-            dataKey="Deaths"
+            dataKey="deaths"
             stroke="#ff6b6b"
             dot={false}
             strokeWidth="0.2rem"
           />
         </LineChart>
-      </div>
+      </ResponsiveContainer>
     );
   }
 }

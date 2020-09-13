@@ -2,6 +2,9 @@ body {
   /* background-color: #1a535c;
   background-color: #feb612; */
   background-color: #fdfeff;
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
 }
 
 .headingContainer {
@@ -11,19 +14,11 @@ body {
 }
 
 .heading {
-  text-align: center;
   margin: 2rem 0;
   font-family: 'Bebas Neue', cursive;
   font-size: 5rem;
   /* color: #ff6b6b; */
   color: #00a6a6;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .image {
@@ -39,8 +34,17 @@ body {
   text-transform: uppercase;
 }
 
-.globalHeadingContainer {
+.chartContainer {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  margin-top: 2rem;
+}
+
+.chartContent {
+  width: 500px;
+  height: 300px;
+  background-color: #1a535c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1d3557;
+  padding: 1rem 2rem;
 }

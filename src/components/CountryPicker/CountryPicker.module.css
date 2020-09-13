@@ -1,9 +1,3 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 73%;
-}
-
 .selectCountry {
   font-size: 1rem;
   outline: none;
@@ -14,6 +8,7 @@
   border-radius: 5px;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  width: 100%;
 }
 
 .countryHeading {
@@ -21,7 +16,7 @@
   align-items: center;
   font-size: 2rem;
   color: #ff8800;
-  width: 73%;
+  /* width: 73%; */
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;

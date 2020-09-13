@@ -8,6 +8,7 @@ import Chart from './components/Chart/Chart';
 import LastUpdate from './components/LastUpdate/LastUpdate';
 
 import { fetchData } from './api/index';
+import ProtectiveMeasures from './components/ProtectiveMeasures/ProtectiveMeasures';
 
 class App extends React.Component {
   constructor() {
@@ -47,21 +48,23 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <div className={styles.container}>
-          <div className={styles.globalHeadingContainer}>
-            <h2 className={styles.globalheading}>Global Status</h2>
-          </div>
-          <Cards data={globalData} />
-          <Chart />
-          <LastUpdate data={globalData} />
-
-          <CountryPicker
-            fetchCountryData={this.fetchCountryData}
-            selectedCountry={this.state.selectedCountry}
-          />
-          <Cards data={selectedCountryData} />
-          <LastUpdate data={globalData} />
+        <div className={styles.globalHeadingContainer}>
+          <h2 className={styles.globalheading}>Global Status</h2>
         </div>
+        <Cards data={globalData} />
+        <div className={styles.chartContainer}>
+          <div className={styles.chartContent}>
+            <Chart />
+          </div>
+        </div>
+        <LastUpdate data={globalData} />
+        <CountryPicker
+          fetchCountryData={this.fetchCountryData}
+          selectedCountry={this.state.selectedCountry}
+        />
+        <Cards data={selectedCountryData} />
+        <LastUpdate data={globalData} />
+        <ProtectiveMeasures />
       </>
     );
   }
