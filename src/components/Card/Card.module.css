@@ -4,10 +4,13 @@
   justify-content: space-between;
   font-family: 'Open Sans', sans-serif;
   background: white;
-  margin-right: 1rem;
   border-radius: 10px;
   width: 350px;
   box-shadow: 0 0 10px #bababb;
+}
+
+.container:nth-child(2) {
+  margin: 0 2rem;
 }
 
 .content {
@@ -43,4 +46,16 @@
 .image {
   width: 50px;
   margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container:nth-child(2) {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 220px;
+  }
 }

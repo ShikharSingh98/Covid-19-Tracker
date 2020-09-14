@@ -37,7 +37,7 @@ class App extends React.Component {
   render() {
     const { globalData, selectedCountryData } = this.state;
     return (
-      <>
+      <div className={styles.container}>
         <div className={styles.headingContainer}>
           <h1 className={styles.heading}>COVID-19 TRACKER </h1>
           <div>
@@ -48,9 +48,7 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <div className={styles.globalHeadingContainer}>
-          <h2 className={styles.globalheading}>Global Status</h2>
-        </div>
+        <h2 className={styles.globalheading}>Global Status</h2>
         <Cards data={globalData} />
         <div className={styles.chartContainer}>
           <div className={styles.chartContent}>
@@ -64,8 +62,9 @@ class App extends React.Component {
         />
         <Cards data={selectedCountryData} />
         <LastUpdate data={globalData} />
+        <h2>Protective Measures</h2>
         <ProtectiveMeasures />
-      </>
+      </div>
     );
   }
 }
