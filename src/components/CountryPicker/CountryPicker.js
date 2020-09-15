@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './CountryPicker.module.css';
 
 import { fetchAllCountriesData } from '../../api/index';
+import { ClipLoader } from 'react-spinners';
 
 class CountryPicker extends React.Component {
   constructor() {
@@ -19,29 +20,33 @@ class CountryPicker extends React.Component {
 
   renderSelectInput = () => {
     const { countries } = this.state;
-    if (countries.length !== 0) {
-      return (
-        <select
-          className={styles.selectCountry}
-          onChange={(e) => this.props.fetchCountryData(e.target.value)}
-          defaultValue="India"
-        >
-          {countries.map(({ name }) => {
-            return (
-              <option key={name} value={name}>
-                {name}
-              </option>
-            );
-          })}
-        </select>
-      );
+    if (countries) {
+      if (countries.length !== 0) {
+        return (
+          <select
+            className={styles.selectCountry}
+            onChange={(e) => this.props.fetchCountryData(e.target.value)}
+            defaultValue="India"
+          >
+            {countries.map(({ name }) => {
+              return (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              );
+            })}
+          </select>
+        );
+      } else {
+        return <ClipLoader css={{ margin: '0 1rem' }} color="teal" />;
+      }
     } else {
-      return 'Loading';
+      return <ClipLoader css={{ margin: '1rem' }} color="teal" />;
     }
   };
 
   renderFlag = (country) => {
-    if (country) {
+    if (country && this.state.countries) {
       const selectedCountryData = this.state.countries.filter(
         ({ name }) => name === country
       );
@@ -56,6 +61,8 @@ class CountryPicker extends React.Component {
       } else {
         return null;
       }
+    } else {
+      return <ClipLoader css={{ margin: '0 1rem' }} color="teal" />;
     }
   };
 

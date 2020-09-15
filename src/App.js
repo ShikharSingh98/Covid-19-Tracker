@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { globalData, selectedCountryData } = this.state;
+    const { globalData, selectedCountryData, selectedCountry } = this.state;
     return (
       <div className={styles.container}>
         <div className={styles.headingContainer}>
@@ -56,7 +56,7 @@ class App extends React.Component {
         </div>
         <CountryPicker
           fetchCountryData={this.fetchCountryData}
-          selectedCountry={this.state.selectedCountry}
+          selectedCountry={selectedCountry}
         />
         <Cards data={selectedCountryData} />
 

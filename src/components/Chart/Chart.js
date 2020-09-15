@@ -24,6 +24,12 @@ class Chart extends React.Component {
     this.setState({ data: data });
   }
 
+  renderColorfulLegendText(value, entry) {
+    const { color } = entry;
+
+    return <span style={{ color }}>{value}</span>;
+  }
+
   render() {
     return (
       <ResponsiveContainer width="100%" height="100%">
@@ -67,7 +73,7 @@ class Chart extends React.Component {
               fontWeight: 'bold',
             }}
           />
-          <Legend />
+          <Legend formatter={this.renderColorfulLegendText} />
           <Line
             type="monotone"
             dataKey="infected"
