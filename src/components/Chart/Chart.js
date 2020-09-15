@@ -38,7 +38,6 @@ class Chart extends React.Component {
         >
           <XAxis
             dataKey="date"
-            // tickLine={false}
             padding={{ right: 20 }}
             tick={{
               fill: 'white',
@@ -50,7 +49,6 @@ class Chart extends React.Component {
             stroke="white"
           />
           <YAxis
-            // tickLine={false}
             padding={{ top: 20 }}
             tick={{
               fill: 'white',

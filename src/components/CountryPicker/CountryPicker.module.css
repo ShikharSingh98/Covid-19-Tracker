@@ -15,8 +15,7 @@
   display: flex;
   align-items: center;
   font-size: 2rem;
-  color: #ff8800;
-  /* width: 73%; */
+  color: #134074;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -26,4 +25,15 @@
 .image {
   width: 45px;
   margin-left: 1rem;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .countryHeading {
+    font-size: 1.5rem;
+    justify-content: center;
+  }
 }

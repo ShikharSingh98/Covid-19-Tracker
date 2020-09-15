@@ -1,8 +1,24 @@
+.container {
+  width: 100%;
+  margin-top: 5rem;
+  background-color: #ff6b6b;
+  border-radius: 10px;
+  width: 80%;
+  color: white;
+}
+
+.protectiveMeasuresHeading {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 .measures {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
   margin: 2rem 0;
 }
 
@@ -18,11 +34,23 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
   .measures span {
     width: 250px;
     font-size: 0.9rem;
   }
   .measures img {
     width: 50px;
+  }
+  .protectiveMeasuresHeading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
   }
 }

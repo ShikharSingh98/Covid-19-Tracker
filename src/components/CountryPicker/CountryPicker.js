@@ -49,7 +49,7 @@ class CountryPicker extends React.Component {
         return (
           <img
             className={styles.image}
-            src={`https://www.countryflags.io/${selectedCountryData[0].iso2}/flat/64.png`}
+            src={`https://www.countryflags.io/${selectedCountryData[0].iso2}/shiny/64.png`}
             alt="flag"
           ></img>
         );

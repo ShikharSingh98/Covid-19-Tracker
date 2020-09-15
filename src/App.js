@@ -39,14 +39,13 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.headingContainer}>
-          <h1 className={styles.heading}>COVID-19 TRACKER </h1>
-          <div>
-            <img
-              className={styles.image}
-              src="https://img.icons8.com/ultraviolet/40/000000/virus.png"
-              alt="virus"
-            />
-          </div>
+          <span>C</span>
+          <img
+            className={styles.image}
+            src="https://img.icons8.com/plasticine/70/000000/coronavirus.png"
+            alt="covid-19"
+          />
+          <span>VID-19 TRACKER</span>
         </div>
         <h2 className={styles.globalheading}>Global Status</h2>
         <Cards data={globalData} />
@@ -55,15 +54,14 @@ class App extends React.Component {
             <Chart />
           </div>
         </div>
-        <LastUpdate data={globalData} />
         <CountryPicker
           fetchCountryData={this.fetchCountryData}
           selectedCountry={this.state.selectedCountry}
         />
         <Cards data={selectedCountryData} />
-        <LastUpdate data={globalData} />
-        <h2>Protective Measures</h2>
+
         <ProtectiveMeasures />
+        <LastUpdate data={globalData} />
       </div>
     );
   }

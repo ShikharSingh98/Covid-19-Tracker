@@ -1,12 +1,10 @@
 body {
-  background-color: #1a535c;
-  /* background-color: #feb612; */
   display: flex;
   justify-content: center;
-  /* background-color: #fdfeff; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #8da9c4;
 }
 
 .container {
@@ -20,28 +18,21 @@ body {
 .headingContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.heading {
+  align-items: center;
   margin: 2rem 0;
   font-family: 'Bebas Neue', cursive;
   font-size: 5rem;
-  /* color: #ff6b6b; */
-  color: #00a6a6;
-}
-
-.image {
-  width: 60px;
+  color: #db504a;
+  width: 100%;
 }
 
 .globalheading {
   font-size: 2rem;
-  color: #ffe66d;
-  color: #ff8800;
+  color: #134074;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .chartContainer {
@@ -60,12 +51,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .heading {
+  .headingContainer {
     font-size: 3rem;
-  }
-
-  .image {
-    width: 40px;
   }
   .chartContent {
     width: 300px;
@@ -75,5 +62,9 @@ body {
 
   .globalheading {
     font-size: 1.5rem;
+    width: 60%;
+  }
+  .image {
+    width: 40px;
   }
 }

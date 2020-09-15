@@ -28,7 +28,10 @@ const ProtectiveMeasures = () => {
     },
   ];
   return (
-    <>
+    <div className={styles.container}>
+      <h2 className={styles.protectiveMeasuresHeading}>
+        Basic Protective Measures
+      </h2>
       {protectiveMeasures.map(({ img, text, id }) => {
         return (
           <div key={id} className={styles.measures}>
@@ -37,7 +40,7 @@ const ProtectiveMeasures = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,7 @@
 .lastUpdate {
   font-family: 'Open Sans', sans-serif;
-  /* color: white; */
-  margin-top: 1rem;
+  color: white;
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 1rem;
 }
