@@ -59,7 +59,6 @@ class App extends React.Component {
           selectedCountry={selectedCountry}
         />
         <Cards data={selectedCountryData} />
-
         <ProtectiveMeasures />
         <LastUpdate data={globalData} />
       </div>

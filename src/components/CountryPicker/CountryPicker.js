@@ -70,11 +70,12 @@ class CountryPicker extends React.Component {
     const { selectedCountry } = this.props;
     return (
       <div className={styles.container}>
+        <span className={styles.selectCountryHeading}>Select Country</span>
+        {this.renderSelectInput()}
         <div className={styles.countryHeading}>
           <span>{selectedCountry}</span>
           {this.renderFlag(selectedCountry)}
         </div>
-        {this.renderSelectInput()}
       </div>
     );
   }

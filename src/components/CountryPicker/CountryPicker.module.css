@@ -6,20 +6,26 @@
   font-weight: bold;
   padding: 0.3rem 0.2rem;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 3rem;
   width: 100%;
 }
 
+.container {
+  width: 100%;
+  margin-top: 5rem;
+}
+
 .countryHeading {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 2rem;
   color: #134074;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .image {
@@ -27,13 +33,20 @@
   margin-left: 1rem;
 }
 
-.container {
-  width: 100%;
+.selectCountryHeading {
+  font-family: 'Open Sans', sans-serif;
+  color: #134074;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
 @media (max-width: 600px) {
   .countryHeading {
     font-size: 1.5rem;
     justify-content: center;
+  }
+  .selectCountryHeading {
+    font-size: 1rem;
   }
 }
