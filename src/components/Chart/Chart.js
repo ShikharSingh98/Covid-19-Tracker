@@ -67,6 +67,8 @@ class Chart extends React.Component {
             labelStyle={{
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: 'bold',
+              color: '#4361ee',
+              textAlign: 'center',
             }}
             itemStyle={{
               fontFamily: "'Open Sans', sans-serif",
