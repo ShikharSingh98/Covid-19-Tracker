@@ -1,0 +1,15 @@
+.error {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.loader {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader h2 {
+  margin-left: 1rem;
+}
