@@ -4,7 +4,7 @@ import styles from './App.module.css';
 
 import Cards from './components/Cards/Cards';
 import CountryPicker from './components/CountryPicker/CountryPicker';
-import Chart from './components/Chart/Chart';
+// import Chart from './components/Chart/Chart';
 import LastUpdate from './components/LastUpdate/LastUpdate';
 
 import { fetchData } from './api/index';
@@ -49,11 +49,11 @@ class App extends React.Component {
         </div>
         <h2 className={styles.globalheading}>Global Status</h2>
         <Cards data={globalData} />
-        <div className={styles.chartContainer}>
+        {/* <div className={styles.chartContainer}>
           <div className={styles.chartContent}>
             <Chart />
           </div>
-        </div>
+        </div> */}
         <CountryPicker
           fetchCountryData={this.fetchCountryData}
           selectedCountry={selectedCountry}
