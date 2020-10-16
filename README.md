@@ -4,7 +4,7 @@ The aim of this web application is to spread awareness about COVID-19 pandemic.
 
 [Live Demo](https://covid19trackerbyshikhar.netlify.app/)
 
-![GIF](screenshots/screenshot.png)
+![screenshot](screenshots/screenshot.PNG)
 
 ## TECHNOLOGIES
 
