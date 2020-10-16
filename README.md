@@ -2,14 +2,16 @@
 
 The aim of this web application is to spread awareness about COVID-19 pandemic.
 
-[Live Demo](https://covid19trackerbyshikhar.netlify.app/) 
+[Live Demo](https://covid19trackerbyshikhar.netlify.app/)
 
-
-![GIF](screenshots/covid-19.gif)
+![GIF](screenshots/screenshot.png)
 
 ## TECHNOLOGIES
-* HTML
-* CSS
-* React
+
+- HTML
+- CSS
+- React
+
 ## API
+
 [mathdroid](https://github.com/mathdroid/covid-19-api)
