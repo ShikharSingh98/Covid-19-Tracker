@@ -61,6 +61,19 @@ class App extends React.Component {
         <Cards data={selectedCountryData} />
         <ProtectiveMeasures />
         <LastUpdate data={globalData} />
+        <div className={styles.iconsLink}>
+          <span>Icons By</span>
+          <a
+            href="https://icons8.com/"
+            style={{
+              marginLeft: '0.5rem',
+              textDecoration: 'none',
+              color: 'crimson',
+            }}
+          >
+            Icons 8
+          </a>
+        </div>
       </div>
     );
   }
