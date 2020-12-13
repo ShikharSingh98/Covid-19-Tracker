@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #8da9c4;
+  background-color: #dc2626;
 }
 
 .container {
@@ -22,13 +22,13 @@ body {
   margin: 2rem 0;
   font-family: 'Bebas Neue', cursive;
   font-size: 5rem;
-  color: #db504a;
+  color: #ffffff;
   width: 100%;
 }
 
 .globalheading {
   font-size: 2rem;
-  color: #134074;
+  color: #fca5a5;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -48,13 +48,14 @@ body {
   height: 300px;
   background-color: #1a535c;
   border-radius: 10px;
-  box-shadow: 0 0 10px #1d3557;
+  box-shadow: 0 0 10px #c40808;
   padding: 1rem 2rem;
 }
 
 .iconsLink {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
+  color: white;
 }
 
 @media (max-width: 600px) {

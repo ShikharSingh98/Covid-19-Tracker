@@ -68,7 +68,7 @@ class App extends React.Component {
             style={{
               marginLeft: '0.5rem',
               textDecoration: 'none',
-              color: 'crimson',
+              color: 'lime',
             }}
           >
             Icons 8
