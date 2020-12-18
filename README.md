@@ -6,4 +6,4 @@ Built using React.
 
 [Live Demo](https://covid19trackerbyshikhar.netlify.app/)
 
-![screenshot](screenshots/screenshot.PNG)
+![screenshot](https://user-images.githubusercontent.com/36772502/102627936-efc7f880-416e-11eb-9630-662ac1e24732.PNG)
